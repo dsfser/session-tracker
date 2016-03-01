@@ -4,11 +4,11 @@
 
 (function ( $ ) {
 
-    $.fn.sessionTracker = function(callback, duration, alertDuration, updater, updateUrl, removeUrl, session_id, token, mode, shopid) {
+    $.fn.sessionTracker = function(callback, duration, alertDuration, intervalScreensaver, updater, updateUrl, removeUrl, session_id, token, mode, shopid) {
 
         var orginalDuration = duration;
 
-        if(mode == true){ var interval = 15000; } else { var interval = 1000; }
+        if(mode == true){ var interval = intervalScreensaver; } else { var interval = 1000; }
 
         var destroySession = false;
 
@@ -37,7 +37,6 @@
             if(mode == true){
                 var formData = new FormData();
                 formData.append('_token', token);
-                formData.append('shopid', shopid);
 
                 $.ajax({
                     url: updateUrl,
