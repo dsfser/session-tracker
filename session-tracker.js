@@ -4,7 +4,7 @@
 
 (function ( $ ) {
 
-    $.fn.sessionTracker = function(callback, duration, alertDuration, intervalScreensaver, updater, updateUrl, removeUrl, session_id, token, mode, shopid) {
+    $.fn.sessionTracker = function(callback, duration, alertDuration, intervalScreensaver, updater, updateUrl, removeUrl, session_id, token, mode) {
 
         var orginalDuration = duration;
 
